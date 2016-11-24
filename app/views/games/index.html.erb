@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Games</h1>
+<center>
+  <h1>Declan <%= Game.declan_wins %> - SWM <%= Game.swm_wins %></h1>
+</center>
 
+<h2>Games</h2>
 <table>
   <thead>
     <tr>
@@ -24,5 +27,5 @@
 </table>
 
 <br>
-
+<p>No individual records existed before the 24th November 2016 17:00. The tally prior to this was:<br /><br />Declan 21 - SWM - 29</p>
 <%= link_to 'New Game', new_game_path %>
