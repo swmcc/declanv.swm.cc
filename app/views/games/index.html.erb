@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Winner</th>
-      <th>Notes</th>
+      <th>Date & Time</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,10 +15,9 @@
     <% @games.each do |game| %>
       <tr>
         <td><%= game.winner %></td>
-        <td><%= game.notes %></td>
+        <td><%= game.created_at.strftime("%e %b %Y %H:%M:%S") %></td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
