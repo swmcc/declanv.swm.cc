@@ -19,8 +19,7 @@
       <tr>
         <td><%= game.winner %></td>
         <td><%= game.created_at.strftime("%e %b %Y %H:%M:%S") %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
+        <td><%= link_to 'View Writeup', game %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +27,6 @@
 
 <br>
 <p>No individual records existed before the 24th November 2016 17:00. The tally prior to this was:<br /><br />Declan 21 - SWM - 29</p>
+<% if user_signed_in? %>
 <%= link_to 'New Game', new_game_path %>
+<% end %>

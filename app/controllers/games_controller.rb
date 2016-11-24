@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update]
+  before_action :authenticate_user!, :except => [:index, :show]
 
   def index
     @games = Game.all
