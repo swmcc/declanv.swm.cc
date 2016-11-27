@@ -20,6 +20,11 @@
     <%= f.label :notes %>
     <%= f.text_field :notes %>
   </div>
+  
+  <div class="field">
+    <%= f.label :played_at %>
+    <%= f.datetime_local_field :played_at  %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

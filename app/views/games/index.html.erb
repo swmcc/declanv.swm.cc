@@ -18,8 +18,8 @@
     <% @games.each do |game| %>
       <tr>
         <td><%= game.winner %></td>
-        <td><%= game.created_at.strftime("%e %b %Y %H:%M:%S") %></td>
-        <td><%= link_to 'View Writeup', game %></td>
+        <td><%= game.played_at.try(:strftime, "%e %b %Y %H:%M:%S") %></td>
+        <td><%= link_to '[Writeup]', game %></td>
       </tr>
     <% end %>
   </tbody>

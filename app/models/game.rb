@@ -1,6 +1,6 @@
 class Game < ApplicationRecord
 
-  scope :newest_first, -> { order(created_at: :desc) }
+  scope :newest_first, -> { order(played_at: :desc) }
 
   SWM_PRE_EPOCH_WINS = 29.freeze
   DECLAN_PRE_EPOCH_WINS = 21.freeze
