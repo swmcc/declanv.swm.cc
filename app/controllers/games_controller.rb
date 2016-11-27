@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
 
   def index
-    @games = Game.all
+    @games = Game.newest_first
   end
 
   def show
